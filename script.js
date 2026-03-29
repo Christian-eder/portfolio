@@ -271,17 +271,15 @@ if (contactForm) {
     });
 }
 
-// ========== RESUME DOWNLOAD (UPDATED WITH YOUR ACTUAL FILE NAME) ==========
+// ========== RESUME DOWNLOAD - UPDATED TO "Black Modern Professional Resume.pdf" ==========
 const downloadBtns = document.querySelectorAll('#downloadResume, #downloadResumeBottom');
-
-// Your actual resume filename with spaces
-const resumeFileName = 'Black Modern Professional Resume (2).pdf';
+const resumeFileName = 'Black Modern Professional Resume.pdf';
 
 downloadBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
         
-        // Encode the filename to handle spaces and parentheses
+        // Encode the filename to handle spaces
         const encodedFileName = encodeURIComponent(resumeFileName);
         
         // Create a link element and trigger download
